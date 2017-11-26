@@ -9,19 +9,19 @@
 </head>
 
 <body>
-    <h1>Hello word</h1>
+    <h1>v-if  v-show v-else </h1>
+    <p>v-if判断是否加载,v-show:调整css的display</p>
     <hr>
     <div id="app">
-            <p> {{message}}</p>
-            <p> {{message+11}}</p>
-            
-            <p><input type="text" v-model="message"></p>
+        <div v-if="ok">真的</div>
+        <div v-else>假的</div>
+        <div v-show="ok">真的show</div>
     </div>
     <script>
         var vm = new Vue({
             el:'#app',
             data:{
-                message: 'hello word.'
+                ok: true
             }
         })    
     </script>
