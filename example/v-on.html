@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue例子</title>
+    <script src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <h1>v-on</h1>
+    <hr>
+    <div id="app">
+        <p> {{a}}</p>
+        <p>
+            <button v-on:click="jia">+1</button>
+            <button @click="jian">-1</button>
+        </p>
+        <p>
+                <input type="text" @keyup.enter="onEnter" v-model='b' ></input>
+                <input type="text" @keyup.113="onF2" v-model='b' ></input>
+                
+        </p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: 10,
+                b: 0,
+            },
+            methods: {
+                jia: function () {
+                    this.a++;
+                },
+                jian: function(){
+                    this.a--;
+                },
+                onEnter: function(){
+                    if(isNaN(this.a))
+                    {
+                        this.a='0';
+                    }
+                    this.a = parseInt(this.a) + parseInt(this.b);
+                },
+                onF2: function(){
+                    this.a = parseInt(this.a) - parseInt(this.b);
+                }
+            }
+        })    
+    </script>
+</body>
+
+</html>
