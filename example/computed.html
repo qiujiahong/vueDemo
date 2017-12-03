@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue例子</title>
+    <script src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <h1>computed</h1>
+    <hr>
+    <div id="app">
+            <p> 原价：{{orgPrice}}</p>
+            <p> 折扣：{{discount}}</p>
+            <p> 现价：{{price}}</p>
+            <p><button @click="add">+</button></p>
+        </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                orgPrice: 10,
+                discount:0.7
+            },
+            computed: {
+                price: function () {
+                    return '$'+this.orgPrice*this.discount;
+                }
+            },
+            methods:{
+                add:function(){
+                    this.orgPrice++;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
