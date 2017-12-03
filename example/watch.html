@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue例子</title>
+    <script src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <h1>watch</h1>
+    <hr>
+    <div id="app">
+        <p>苹果</p>
+        <p>购买数量：{{n}}</p
+            <p><button @click="jia">+</button> <button @click="jian">-</button></p>
+        </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                n: '1'
+            },
+            methods:{
+                jia:function(){
+                    this.n++;
+                },
+                jian:function(){
+                    this.n--;
+                }
+            },
+            watch:{
+                n:function(newVal,oldVal){
+                    console.log("oldVal:"+oldVal);
+                    console.log("newVal:"+newVal);
+                    if(newVal<0)
+                        this.n=0;
+                }
+            }
+        })    
+        //外部的watch
+        // vm.$watch('n',function(newVal,oldVal){
+        //     if(newVal<0)
+        //     vm.n=0;
+        // })
+    </script>
+</body>
+</html>
