@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue例子</title>
+    <script src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <h1>Vue.extend</h1>
+    <hr>
+    <div id="header"></div>
+    <div id="footer"></div>
+    
+    <script>
+        var header_aaaa = Vue.extend({
+            template:'<p>{{message}} - {{a}}</p>',
+            data:function(){
+                return {
+                    message: 'Hello this is header.'
+                }
+            },
+            props:['a']
+        });
+        var footer_aaaa = Vue.extend({
+            template:'<p>{{message}}</p>',
+            data:function(){
+                return {
+                    message: 'Hello this is footer.'
+                }
+            }
+        });
+        new header_aaaa({
+            propsData:{
+                a:1
+            }
+        }).$mount('#header');
+        new footer_aaaa().$mount('#footer');
+    </script>
+</body>
+</html>
