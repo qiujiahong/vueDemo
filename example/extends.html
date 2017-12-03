@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue例子</title>
+    <script src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <h1>mixins 混入</h1>
+    <hr>
+    <div id="app">
+        {{message}}
+        <p><button @click="jia"> +</button></p>
+    </div>
+    <script>
+        Vue.mixin({
+            created:function(){
+                console.log("全局混入");
+            }
+        })
+        var aaa = {
+            created:function(){
+                this.message ="我被混入了";
+                console.log("混入");
+            },
+            methods:{
+                jia:function(){
+                    console.log("被加了-混入，不执行，被覆盖");
+                }
+            }
+        }
+
+        var bbb = {
+            created:function(){
+                this.message ="我被混入了";
+                console.log("我是被扩展的");
+            }
+        }
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                message: 'hello word.'
+            },
+            created:function(){
+                console.log("构造器原装");
+            },
+            mixins:[aaa],
+            methods:{
+                jia:function(){
+                    console.log("被加了");
+                }
+            },
+            extends:bbb
+        })    
+    </script>
+</body>
+</html>
