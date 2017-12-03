@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>vue例子</title>
+    <script src="../assets/js/vue.js"></script>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body>
+    <h1>methods</h1>
+    <hr>
+    <div id="app">
+            <p> {{a}}</p>
+            <!-- <p><button @click="jia(2)">+</button></p> -->
+            <!-- <p><button @click="jia">+</button></p> -->
+            <p><button @click="a++">+</button></p>
+            <btn @click.native="jia"></btn>
+        </div>
+    <script>
+        var btn ={
+            template:'<button>外部组件</button>'
+        }
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                a: 1
+            },
+            methods:{
+                // jia:function(){
+                //     this.a++;
+                // },
+                jia:function(num,event){
+                    this.a++;
+                }
+            },
+            components:{
+                'btn':btn
+            }
+        })    
+    </script>
+</body>
+</html>
