@@ -1,0 +1,62 @@
+
+
+# v-for
+
+## 演示效果
+
+* 循环变量数组，对象。
+* 使用computed对对象进行排序再循环显示；
+ 
+ ## 实现
+ ```html
+    <div id="app">
+            <ul>
+                <li v-for="(bbb,ccc) in devst">
+                    {{ccc}} {{bbb.name}} - {{bbb.age}}
+                </li>
+            </ul>
+            
+            <hr>
+            <ul>
+                <li v-for="aaa in devStudent">
+                    {{aaa}}
+                </li>
+            </ul>
+
+    </div>
+    <script>
+        var vm = new Vue({
+            el:'#app',
+            data:{
+                student:[30,3,10,55,5,14,20],
+                st:[
+                {name:'nick',age:30},
+                {name:'nick1',age:20},
+                {name:'nick2',age:3},
+                {name:'nick3',age:10},
+                {name:'nick4',age:9},
+                {name:'nick5',age:3}
+                ]
+            },
+            computed:{
+                devStudent:function(){
+                    return this.student.sort(sortNumber);
+                },
+                devst:function(){
+                    return sortByKey(this.st,'age');
+                }
+            }
+        })    
+        function sortNumber(a,b){
+            return a-b;
+        }
+        function sortByKey(array,key){
+            return array.sort(function(a,b){
+                var x = a[key]; var y = b[key];
+                return ((x<y)?-1:((x>y)?1:0));
+            });
+        }
+    </script>
+ ```
+ 
+ ## [完整代码](v-for.html)
