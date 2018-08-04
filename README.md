@@ -26,7 +26,7 @@
             
  ## 选项   
  * [propsData](example/propsData.html)
- * [computed](example/computed.html)
+ * [computed](example/computed.md)
  * [methods](example/methods.html)
  * [watch](example/watch.html)
  * [mixins](example/mixins.html)

@@ -1,16 +1,15 @@
-<!DOCTYPE html>
-<html>
+# computed
 
-<head>
-    <meta charset="utf-8">
-    <title>vue例子</title>
-    <script src="../assets/js/vue.js"></script>
-    <link rel="stylesheet" href="../assets/css/index.css">
-</head>
+## 演示效果
 
-<body>
-    <h1>computed</h1>
-    <hr>
+使用已有参数，计算出新的参数，并且显示到页面上，计算出来的数值保留2位数；
+
+ 
+![](./assets/2018-08-04-17-18-44.png)
+
+## 实现
+
+```html
     <div id="app">
         <p> 原价：{{orgPrice}}</p>
         <p> 折扣：{{discount}}</p>
@@ -39,6 +38,7 @@
             }
         })
     </script>
-</body>
+```
+ 
+ ## [完整代码](computed.html)
 
-</html>
