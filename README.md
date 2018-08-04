@@ -5,7 +5,7 @@
  * [v-if && v-else](example/v-if.html)
  * [v-for](example/v-for.html)
  * [v-text](example/v-text.html)
- * [v-on](example/v-on.html)
+ * [v-on](example/v-on.md)
  * [v-model](example/v-model.html)
  * [v-bind](example/v-bind.html)
  * [v-show](example/v-show.md)
