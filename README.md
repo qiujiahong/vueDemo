@@ -4,7 +4,7 @@
  * [Hello word](example/helloWord.md)
  * [v-if && v-else && v-show](example/v-if.md)
  * [v-for](example/v-for.md)
- * [v-text](example/v-text.html)
+ * [v-text](example/v-text.md)
  * [v-on @](example/v-on.md)
  * [v-model](example/v-model.html)
  * [v-bind](example/v-bind.html)
