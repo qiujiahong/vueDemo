@@ -2,13 +2,12 @@
 
 ## 指令
  * [Hello word](example/helloWord.md)
- * [v-if && v-else](example/v-if.html)
+ * [v-if && v-else && v-show](example/v-if.md)
  * [v-for](example/v-for.html)
  * [v-text](example/v-text.html)
- * [v-on](example/v-on.md)
+ * [v-on @](example/v-on.md)
  * [v-model](example/v-model.html)
  * [v-bind](example/v-bind.html)
- * [v-show](example/v-show.md)
  * [v-others](example/v-others.html)
  
 
