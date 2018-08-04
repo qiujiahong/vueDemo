@@ -9,7 +9,7 @@
  
  ## 实现
  ```html
-  <div id="app">
+    <div id="app">
         <div v-show="isShow">You got me!</div>
     </div>
     <script>
