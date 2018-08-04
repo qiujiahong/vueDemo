@@ -8,7 +8,9 @@
  * [v-on](example/v-on.html)
  * [v-model](example/v-model.html)
  * [v-bind](example/v-bind.html)
+ * [v-show](example/v-show.md)
  * [v-others](example/v-others.html)
+ 
 
  ## 全局API        
         

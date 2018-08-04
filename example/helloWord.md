@@ -8,6 +8,7 @@
  
  ## 实现
  ```html
+<!-- 引用vue后续将不会在说明vue的引用，生产环境中请使用最小版 -->
 <script src="../assets/js/vue.js"></script>
 
 <div id="app">
