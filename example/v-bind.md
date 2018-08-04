@@ -1,0 +1,55 @@
+# v-bind :
+
+
+## 演示效果
+
+演示了使用v-bind关键字绑定属性，使用符号:绑定属性，绑定class的一些用法
+ 
+ ## 实现
+ ```html
+    <hr>
+    <div id="app">
+        <img v-bind:src="imgSrc" :width="width" />
+        <hr>
+        <div :class="className">1.绑定class</div>
+        <div :class="{classA:colorOr}">2.绑定class中的判断</div>
+        <div :class="[classA,classB]">3.绑定class中使用数组</div>
+        <div :class="[colorOr?classA:classB]">4.绑定class中使用三元表达式</div>
+        <div :class="[{classA:colorOr},classB]">5.绑定class中使用判断组合</div>
+
+        <hr>
+        <div :style="{color:red,fontSize:font}">6.style绑定</div>
+        <div :style="fontArray">6.style绑定json语句</div>
+
+    </div>
+    <style>
+        .classA {
+            color: red;
+        }
+
+        .classB {
+            font-size: 200%;
+        }
+    </style>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                imgSrc: 'https://cn.vuejs.org/images/logo.png',
+                width: '50',
+                className: 'classA',
+                colorOr: true,
+                classA: 'classA',
+                classB: 'classB',
+                red: 'red',
+                font: '30px',
+                fontArray: {
+                    color: 'green',
+                    fontSize: '12px'
+                }
+            }
+        })    
+    </script>
+ ```
+ 
+ ## [完整代码](v-bind.html)

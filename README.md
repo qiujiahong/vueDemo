@@ -7,7 +7,7 @@
  * [v-text](example/v-text.md)
  * [v-on @](example/v-on.md)
  * [v-model](example/v-model.html)
- * [v-bind](example/v-bind.html)
+ * [v-bind :](example/v-bind.md)
  * [v-others](example/v-others.html)
  
 
